@@ -45,9 +45,13 @@ public class Task_3 {
                 max = list.get(i);
             sum += list.get(i);
         }
-        double avg = sum / list.size();
-        System.out.printf("Среднее значение: %.2f. Минимальное значение: %d. Максимальное значение: %d.", avg, min,
-                max);
+        int listSize = list.size();
+        if (listSize > 0) {
+            double avg = sum / list.size();
+            System.out.printf("Среднее значение: %.2f. Минимальное значение: %d. Максимальное значение: %d.", avg, min,
+                    max);
+        } else
+            System.out.println("Список пуст!");
     }
 }
 /*
